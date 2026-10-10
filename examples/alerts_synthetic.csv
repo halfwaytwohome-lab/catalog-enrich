@@ -1,0 +1,6 @@
+alert_id,family,note
+S001,emotet,SYNTHETIC demo row
+S002,Zeus,SYNTHETIC demo row (alias)
+S003,Xtreme RAT,SYNTHETIC demo row (normalized alias)
+S004,sharedalias,SYNTHETIC demo row (ambiguous alias)
+S005,notafamily,SYNTHETIC demo row (no match)
