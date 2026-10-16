@@ -1,13 +1,5 @@
 # catalog-enrich
 
-<!-- TODO(repo-url): replace OWNER/catalog-enrich below with the real GitHub path once the repo exists. -->
-[![CI](https://github.com/OWNER/catalog-enrich/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/catalog-enrich/actions/workflows/ci.yml)
-[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](pyproject.toml)
-
-> **TODO (repo URL):** the badges above point at the placeholder `OWNER/catalog-enrich`.
-> Replace it (here and in `pyproject.toml` `[project.urls]`) when the public repository is created.
-
 Offline, provenance-stamped malware **family-name lookup** and **CSV enrichment** against a
 pinned JSONL catalog snapshot. Zero runtime dependencies (standard library only).
 
@@ -74,7 +66,7 @@ $ make enrich SNAPSHOT=/path/to/data/malware_families.jsonl INPUT=alerts.csv OUT
 JSON Lines, one object per line (UTF-8, BOM tolerated). Fields read (schema_version 1.1.0):
 
 | Field | Type | Used for |
-| --- | --- | --- |
+ --- | --- | ---
 | `family` | string, required | primary key (exact + normalized match) |
 | `aliases` | list of strings | alias match |
 | `category` | string | `category_raw`, `category_normalized` |
@@ -96,7 +88,6 @@ Normalization: Unicode NFKC, casefold, drop every non-alphanumeric character
 (`"Xtreme RAT"`, `"xtreme-rat"`, `"XTREMERAT"` share one key).
 
 Resolution order and `match_method` values:
-
 1. `exact`: literal `family` match
 2. `normalized`: normalized `family` match
 3. `alias`: normalized alias match

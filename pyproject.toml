@@ -33,10 +33,9 @@ dev = ["pytest>=7", "ruff>=0.4"]
 [project.scripts]
 catalog-enrich = "catalog_enrich.cli:main"
 
-# TODO(repo-url): fill in once the public repository exists.
-# [project.urls]
-# Homepage = "https://github.com/OWNER/catalog-enrich"
-# Issues = "https://github.com/OWNER/catalog-enrich/issues"
+[project.urls]
+Homepage = "https://github.com/halfwaytwohome-lab/catalog-enrich"
+Issues = "https://github.com/halfwaytwohome-lab/catalog-enrich/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
